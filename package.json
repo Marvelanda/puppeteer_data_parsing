@@ -1,0 +1,16 @@
+{
+  "name": "dentsu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test_puppeteer.js",
+  "scripts": {
+    "start": "node test_puppeteer.js ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^5.5.0"
+  }
+}

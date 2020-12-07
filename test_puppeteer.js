@@ -6,12 +6,16 @@ const parseData = async () => {
   const page = await browser.newPage();
   await page.goto('https://www.okeydostavka.ru/');
   await page.setViewport({ width: 1440, height: 1200 });
-  await page.waitForSelector('body');
+  await page.waitForSelector(
+    '#citySelectionLink > tbody > tr > td.dijitReset.dijitStretch.dijitButtonContents > div.dijitReset.dijitInputField.dijitButtonText > span'
+  );
 
   await page.click(
     '#citySelectionLink > tbody > tr > td.dijitReset.dijitStretch.dijitButtonContents > div.dijitReset.dijitInputField.dijitButtonText > span'
   );
-  await page.click('#dijit_MenuItem_0_text');
+  await page.click(
+    '#citySelectionLink_menu > table > tbody > tr > td.dijitMenuItemLabel'
+  );
 
   await page.waitForNavigation();
 
